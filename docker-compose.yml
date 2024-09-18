@@ -7,8 +7,8 @@ services:
       faveo-network:
          ipv4_address: 172.24.2.1
     ports:
-      - "80:80"
-      - "443:443"
+      - "8099:80"
+      - "9443:443"
     volumes:
       - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
       - ./${HOST_ROOT_DIR}:/var/www/html/
