@@ -138,7 +138,7 @@ echo "<h1>Obtain SSL Certs</h1>" > $CUR_DIR/certbot/html/index.html
 
 echo -e "Initializing Temporary Apache container to obtain SSL Certificates..."
 
-docker run -dti -p 80:80 -v $CUR_DIR/certbot/html:/usr/local/apache2/htdocs --name apache-cert httpd:2.4.33-alpine
+docker run -dti -p 9090:80 -v $CUR_DIR/certbot/html:/usr/local/apache2/htdocs --name apache-cert httpd:2.4.33-alpine
 
 if [[ $? -eq 0 ]]; then
     echo "Initializing Certbot Container to obtain SSL Certificates for $domainname"
